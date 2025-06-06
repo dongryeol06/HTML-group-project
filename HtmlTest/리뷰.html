@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        @font-face {
+            font-family: 'Medium';
+            src: url(static/NotoSerifKR-Medium.ttf);
+        }
+        body{
+            background-color: black;
+            font-family: 'Medium';
+        }
+
+        .top div h2{
+            margin:0 auto;
+            border-bottom: 2px solid white;
+            text-align: center;
+            width:300px;
+            font-size: 30px;
+        }
+
+        #top_navigation {
+            height: 300px;
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        #top_navigation div {
+            border: 1px solid white;
+            width: 150px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-right:250px;
+            margin-left:250px;
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+        h2{
+            color:white; 
+        }
+        a{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="web">
+
+        <div class="top">
+            <div>
+                <h2>리뷰</h2>
+            </div>
+        </div>
+
+        <div id="top_navigation">
+            <h2>리뷰 :</h2>
+            <div id="selection">
+                <a href="#"><h3>쵸이닷</h3></a>
+            </div>
+
+            <div id="selection">
+                <a href="#"><h3>모수</h3></a>
+            </div>
+
+            <div id="selection">
+                <a href="#"><h3>비아 톨레도 파스타 바</h3></a>
+            </div>
+
+            <div id="selection">
+                <a href="#"><h3>610 Magnolia</h3></a>
+            </div>
+        </div>
+
+        <div style="width:80%; margin:0 auto;">
+            <hr>
+        </div>
+    </div>
+</body>
+</html>

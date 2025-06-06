@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셰프</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+        list-style: none;
+    }
+    a{
+        color:white;
+    }
+
+    @font-face {
+    font-family: 'Medium';
+    src: url(static/NotoSerifKR-Medium.ttf);
+    }
+    body{
+        background-color: black;
+        font-family: 'Medium';
+    }
+
+    .web{
+        height:2000px;
+    }
+
+    .top div h2{
+            margin:0 auto;
+            border-bottom: 2px solid white;
+            text-align: center;
+            width:300px;
+            font-size: 30px;
+        }
+
+
+    .boxContainer{
+        display: flex;
+        justify-content: center;           
+        padding: 20px;
+        background-color: black;
+    }
+
+    .boxContainer div{
+        text-align: center;
+        padding: 10px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+
+    .boxContainer div div{
+        border-radius: 20px;
+        border: 1px solid white;
+    }
+
+
+    img{
+        width:400px;
+        height:600px;
+        padding:20px;
+        border-radius: 20px;
+    }
+
+    figcaption{
+        color: white;
+        font-size: 20px;
+        
+        margin-top: 10px;
+    }
+    .middle{
+        background-color: white;
+        width:100%;
+        height:auto
+    }
+    h2{
+        text-align: center;
+        color:white;
+        font-size: 30px;
+    }
+
+
+.chef-section {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    border: 1px solid white;
+    width:2400px;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+.chef-section .line{
+    width:300px;
+    margin:0 auto;
+    
+}
+
+.chef {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin-bottom:100px;
+}
+
+.chef-img img {
+    width: 400px;
+    height: auto;
+}
+
+.chef-info {
+    max-width: 500px;
+}
+
+#chef_kwon:hover{
+    font-weight: bold;
+}
+#chef_lee:hover{
+    font-weight: bold;
+}
+#chef_anh:hover{
+    font-weight: bold;
+}
+#chef_choi:hover{
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.position {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="web">
+        <div class="top">
+            <div>
+                <h2>셰프</h2>
+            </div>
+        </div>
+
+        <div class="boxContainer">
+            <div id="chef1">
+                <div>
+                    <img src="이미지/셰프/최현석 1.png" alt="최현석">
+                </div>
+                <hr>
+                <figure>
+                    <figcaption>최현석</figcaption>
+                </figure>
+            </div>
+            <div id="chef2">
+                <div>
+                    <img src="이미지/셰프/안성재 1.png" alt="안성재">
+                </div>
+                <hr>
+                <figure>
+                    <figcaption>안성재</figcaption>
+                </figure>
+            </div>
+            <div id="chef3">
+                <div>
+                    <img src="이미지/셰프/권성준(1) 1.png" alt="권성준">
+                </div>
+                <hr>
+                <figure>
+                    <figcaption>권성준</figcaption>
+                </figure>
+            </div>
+            <div id="chef4">
+                <div>
+                    <img src="이미지/셰프/에드워드 리(1) 1.png" alt="에드워드 리">
+                </div>
+                <hr>
+                <figure>
+                    <figcaption>에드워드 리</figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+
+        <div class="chef-section">
+            <div class="line">
+                <h2>셰프 소개</h2>
+                <hr>
+            </div>
+            <div class="chef" id="Choi">
+                <div class="chef_img">
+                    <img src="이미지/셰프/최현석 1.png" alt="최현석">
+                </div>
+                <div class="chef-info">
+                    <h3>최현석</h3>
+                    <p class="position">CHEF</p>
+                    <p class="description">From a low-key commuter</p>
+                </div>
+            </div>
+            <div class="chef" id="Anh">
+                <div class="chef_info">
+                    <h3>안성재</h3>
+                    <p class="position">CHEF</p>
+                </div>
+                <div class="chef-img" >
+                    <img src="이미지/셰프/안성재 1.png" alt="안성재">
+                </div>
+            </div>
+            <div class="chef" id="Kwon">
+                <div class="chef-img">
+                    <img src="이미지/셰프/권성준(1) 1.png" alt="권성준">
+                </div>
+                <div class="chef_info">
+                    <h3>권성준</h3>
+                    <p class="position">CHEF</p>
+                </div>
+            </div>
+            <div class="chef" id="Edward">
+                <div class="chef_info">
+                    <h3>에드워드 리</h3>
+                    <p class="position">CHEF</p>
+                </div>
+                <div class="chef-img">
+                    <img src="이미지/셰프/에드워드 리(1) 1.png" alt="에드워드 리">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

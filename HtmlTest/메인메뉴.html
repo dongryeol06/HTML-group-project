@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+@font-face {
+    font-family: 'Medium';
+    src: url(static/NotoSerifKR-Medium.ttf);
+}
+body{
+    background-color: white;
+    font-family: 'Medium';
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 160px;
+    background-color: black;
+    z-index: 1000;
+    
+}
+
+#logo {
+    width: 150px;
+    height: 100px;
+    
+}
+
+#dining {
+    width: 180px;
+    height: 80px;
+    
+}
+
+.header_container > div:nth-child(2) {
+    flex: 1;
+    text-align: center;
+}
+
+#langs {
+    font-size: 20px;
+    
+}
+
+#langs ul {
+    display: flex;
+}
+
+#langs li {
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+}
+#langs li a{
+    color:white;
+}
+
+#langs li:last-child {
+    border-right: none;
+}
+
+
+/* 하단 네비게이션 */
+.links ul li {
+    position: relative;
+    top:10px;
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.links ul li a{
+    color:white;
+}
+
+.bottomContainer {
+    position: relative;
+    top: 160px;
+    background-color: black;
+    height:50px;
+}
+#menu_chef:hover{
+    font-weight: bold;
+}
+#menu_menu:hover{
+    font-weight: bold;
+}
+#menu_reserve:hover{
+    font-weight: bold;
+}
+#menu_review:hover{
+    font-weight: bold;
+}
+#lang_KR:hover{
+    font-weight: bold;
+}
+#lang_JP:hover{
+    font-weight: bold;
+}
+#lang_EN:hover{
+    font-weight: bold;
+}
+
+
+
+
+
+.ContentContainer {
+    height: 3000px;
+    background-color: rgb(231, 231, 231);
+    padding-top: 160px;
+}
+
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    
+}
+footer .footerContainer #footer{
+    margin:0 auto;
+    height:300px;
+    width:900px;
+    
+    
+}
+#footerRow {
+    justify-content: center;
+    margin-top: 20px;
+}
+h4{
+    text-align: center; color:white;
+}
+.rowlink {
+    text-align: center;
+    line-height: 30px;
+}
+.rowlink a{
+    color:white;
+}
+
+
+
+#iframes {
+    width: 100%;
+    height:3000px;
+    
+}
+
+#iframes iframe {
+    height:2840px;
+    width: 100%;
+    
+}
+
+
+</style>
+
+    
+</head>
+<body>
+    <div id="web">
+        <!-- 상단 네비게이션 -->
+        <div class="header_container">
+            <img src="이미지/Logo.png" alt="" id="logo">
+            <div style="text-align: center;">
+                <a href="메인메뉴.html"><img src="이미지/Dining.png" alt="" id="dining"></a>
+            </div>
+            <div id="langs">
+                <ul style="list-style: none;">
+                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang_KR">KR</a></li>
+                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang_JP">JP</a></li>
+                    <li><a href="#" id="lang_EN">EN</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  -->
+
+        <!-- 상단 밑 -->
+        <div class="bottomContainer">
+            <div class="links">
+                <ul style="text-align: center;">
+                    <li style="border-right: 1px solid white;"><a href="셰프.html" target="iframe" id="menu_chef">셰프</a></li>
+                    <li style="border-right: 1px solid white;"><a href="메뉴.html" target="iframe" id="menu_menu">메뉴</a></li>
+                    <li style="border-right: 1px solid white;"><a href="예약.html" target="iframe" id="menu_reserve">예약</a></li>
+                    <li><a href="리뷰.html" target="iframe" id="menu_review">리뷰</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  -->
+
+        <!-- 컨텐츠 -->
+        <div class="ContentContainer">
+            <div id="iframes">
+                <iframe src="셰프.html" name="iframe" id="iframe"></iframe>
+            </div>
+        </div>
+        <!--  -->
+
+        <!-- 하단 네비게이션 -->
+        <footer>
+            <div class="footerContainer">
+                <div id="footer">
+
+                    <div style="text-align: center;">
+                        <a href="메인메뉴.html" style="margin:0 auto;"><img src="이미지/Logo.png" alt="" style="width: 150px; height: 100px;"></a>
+                    </div>
+
+                    <div id="footerRow">
+                        <h4>About</h4>
+                        <ul class="rowlink">
+                            <li><a href="#">찾아오시는 길</a></li>
+                            <li><a href="#">회사 소개</a></li>
+                            <li><a href="#">이용 약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!--  -->
+
+    </div>
+</body>
+</html>
