@@ -30,7 +30,7 @@ body{
     top: 0;
     width: 100%;
     height: 160px;
-    background-color: black;
+    background-color: rgb(32, 10, 68);
     z-index: 1000;
     
 }
@@ -91,28 +91,13 @@ body{
 .bottomContainer {
     position: relative;
     top: 160px;
-    background-color: black;
+    background-color: rgb(32, 10, 68);
     height:50px;
 }
-#menu_chef:hover{
-    font-weight: bold;
+.bottomContainer .links ul li #menu:hover{
+    font-weight:bold;
 }
-#menu_menu:hover{
-    font-weight: bold;
-}
-#menu_reserve:hover{
-    font-weight: bold;
-}
-#menu_review:hover{
-    font-weight: bold;
-}
-#lang_KR:hover{
-    font-weight: bold;
-}
-#lang_JP:hover{
-    font-weight: bold;
-}
-#lang_EN:hover{
+.header_container #langs ul li #lang:hover{
     font-weight: bold;
 }
 
@@ -129,8 +114,8 @@ body{
 
 footer {
     width: 100%;
-    height: 300px;
-    background-color: black;
+    height: auto;
+    background-color: rgb(32, 10, 68);
     
 }
 footer .footerContainer #footer{
@@ -138,11 +123,16 @@ footer .footerContainer #footer{
     height:300px;
     width:900px;
     
-    
 }
 #footerRow {
     justify-content: center;
     margin-top: 20px;
+}
+footer .footer_info{
+    margin:0 auto;
+    color:white;
+    width:900px;
+    text-align: center;
 }
 h4{
     text-align: center; color:white;
@@ -150,9 +140,13 @@ h4{
 .rowlink {
     text-align: center;
     line-height: 30px;
+    
 }
 .rowlink a{
     color:white;
+}
+.rowlink #link:hover{
+    font-weight:bold;
 }
 
 
@@ -184,9 +178,9 @@ h4{
             </div>
             <div id="langs">
                 <ul style="list-style: none;">
-                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang_KR">KR</a></li>
-                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang_JP">JP</a></li>
-                    <li><a href="#" id="lang_EN">EN</a></li>
+                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang">KR</a></li>
+                    <li style="border-right: 1px solid white;"><a href="#" target="_top" id="lang">JP</a></li>
+                    <li><a href="#" id="lang">EN</a></li>
                 </ul>
             </div>
         </div>
@@ -196,10 +190,10 @@ h4{
         <div class="bottomContainer">
             <div class="links">
                 <ul style="text-align: center;">
-                    <li style="border-right: 1px solid white;"><a href="셰프.html" target="iframe" id="menu_chef">셰프</a></li>
-                    <li style="border-right: 1px solid white;"><a href="메뉴.html" target="iframe" id="menu_menu">메뉴</a></li>
-                    <li style="border-right: 1px solid white;"><a href="예약.html" target="iframe" id="menu_reserve">예약</a></li>
-                    <li><a href="리뷰.html" target="iframe" id="menu_review">리뷰</a></li>
+                    <li style="border-right: 1px solid white;"><a href="셰프.html" target="iframe" id="menu">셰프</a></li>
+                    <li style="border-right: 1px solid white;"><a href="메뉴.html" target="iframe" id="menu">메뉴</a></li>
+                    <li style="border-right: 1px solid white;"><a href="예약.html" target="iframe" id="menu">예약</a></li>
+                    <li><a href="리뷰.html" target="iframe" id="menu">리뷰</a></li>
                 </ul>
             </div>
         </div>
@@ -225,15 +219,19 @@ h4{
                     <div id="footerRow">
                         <h4>About</h4>
                         <ul class="rowlink">
-                            <li><a href="#">찾아오시는 길</a></li>
-                            <li><a href="#">회사 소개</a></li>
-                            <li><a href="#">이용 약관</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#" id="link">찾아오시는 길</a></li>
+                            <li><a href="#" id="link">회사 소개</a></li>
+                            <li><a href="#" id="link">이용 약관</a></li>
+                            <li><a href="#" id="link" >개인정보처리방침</a></li>
+                            <li><a href="#" id="link">고객센터</a></li>
                         </ul>
                     </div>
 
                 </div>
+            </div>
+            <hr>
+            <div class="footer_info" style="border:1px solid red;">
+                <span>©Dining 2025. All Rights Reserved.</span>
             </div>
         </footer>
         <!--  -->
