@@ -71,46 +71,63 @@
 
         .menu_section{
             margin:0 auto;
-            width:2200px;
+            width:1900px;
             height:auto;
         }
-
+        .menu_section .menu_pics{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image_box{
+            margin-bottom: 20px;
+        }
         .first_menu{
             height:500px;
             display:flex;
             justify-content: space-between;
         }
         .menu_section .menu_pics #pic1{
-            width:909px;
+            width:950px;
             height:1099px;
         }
         .menu_section .menu_pics #pic2{
-            width:768px;
+            width:898px;
             height:921px;
 
         }
         .menu_section .menu_pics #pic3{
-            width:909px;
+            width:950px;
             height:1099px;
         }
         .menu_section .menu_pics #pic4{
-            width:768px;
+            width:898px;
             height:921px;
         }
         .menu_section .menu_pics #pic5{
-            width:909px;
+            width:950px;
             height:1099px;
         }
         .menu_section .menu_pics #pic6{
-            width:768px;
+            width:898px;
             height:921px;
         }
-        #box2{
-            position: relative;
-            top:0;
+        .reserve_button{
+            margin:20px;
         }
-        
-        
+        .reserve_button div{
+            margin:0 auto;
+            width:200px;
+            height:50px;
+            border: 1px solid white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .reserve_button div a{
+            position: relative;
+            top:10px;
+            cursor:pointer
+        }
     </style>
 </head>
 <body>
@@ -145,6 +162,13 @@
             <hr>
         </div>
 
+        <div class="reserve_button">
+            <div>
+                <a href="예약/쵸이닷.html">예약</a>
+            </div>
+        </div>
+
+
         <div class="menu_section" style="border: 1px solid red;">
             <div class="menu_pics">
                     <div class="image_box">
@@ -171,6 +195,12 @@
                         <img src="이미지/메뉴음식사진/쵸이닷/쵸이닷_음식6.png" alt="" id="pic6">
                     </div>
 
+            </div>
+        </div>
+
+        <div class="reserve_button">
+            <div>
+                <a href="예약/쵸이닷.html">예약</a>
             </div>
         </div>
     </div>

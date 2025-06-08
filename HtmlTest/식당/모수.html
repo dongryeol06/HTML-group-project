@@ -67,49 +67,64 @@
         .menu_section{
             margin:0 auto;
         }
-        img{
-            width:500px;
-            height: 500px;
-        }
+        
 
         .menu_section{
             margin:0 auto;
-            width:2700px;
+            width:1900px;
             height:auto;
         }
-
+        .menu_section .menu_pics{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image_box{
+            margin-bottom: 20px;
+        }
         .first_menu{
             height:500px;
             display:flex;
             justify-content: space-between;
         }
-        .menu_section .first_menu #description_section{
-            width:800px;
-            height:500px;
+        .menu_section .menu_pics #pic1{
+            width:950px;
+            height:1099px;
         }
-        .menu_section .first_menu #description_section #dish_name{
-            text-align: left;
-            width:200px;
-            border-bottom:1px solid white;
-            line-height: 45px;
-            margin-bottom:10px;
+        .menu_section .menu_pics #pic2{
+            width:898px;
+            height:921px;
+
         }
-        .menu_section .first_menu #description_section #reserve{
-            width:200px;
-            border:1px solid white;
-            border-radius: 10px;
-            height:50px;
+        .menu_section .menu_pics #pic3{
+            width:950px;
+            height:991px;
+        }
+        .menu_section .menu_pics #pic4{
+            width:898px;
+            height:791px;
+        }
+        .menu_section .menu_pics #pic5{
+            width:1900px;
+            height:899px;
+        }
+
+        .reserve_button{
+            margin:20px;
+        }
+        .reserve_button div{
             margin:0 auto;
-            position: relative;
-            top:300px;
-        }
-        .menu_section .first_menu #description_section #reserve h3{
+            width:200px;
+            height:50px;
+            border: 1px solid white;
             text-align: center;
+            font-size: 20px;
+        }
+        .reserve_button div a{
             position: relative;
             top:10px;
+            cursor:pointer
         }
-        
-        
     </style>
 </head>
 <body>
@@ -140,28 +155,47 @@
             </div>
         </div>
 
-        <div style="width:80%; margin:0 auto;">
+        <div style="width:30%; margin:0 auto; margin-bottom:30px;">
             <hr>
         </div>
 
-        <div class="menu_section" style="border: 1px solid red;">
-            <div class="first_menu">
-                <div id="menu_img" style="border:1px solid beige">
-                    <img src="C:\Users\rlaruddhks\Desktop\HtmlTest\이미지\음식 예시.png" alt="음식">
-                </div>
-
-                <div id="description_section" style="border: 1px solid rgb(0, 255, 34)">
-                    <h3 id="dish_name">음식이름</h3>
-                    <p id="dish_info">음식설명</p>
-                    <div id="reserve">
-                        <a href="#"><h3>예약</h3></a>
-                    </div>
-                </div>
+        <div class="reserve_button">
+            <div>
+                <a href="예약/쵸이닷.html">예약</a>
             </div>
-
-            <div></div>
-
         </div>
+
+        <div class="menu_section" style="border: 1px solid red;">
+            <div class="menu_pics">
+                    <div class="image_box">
+                        <img src="메뉴음식사진/모수/모수_음식1.png" alt="" id="pic1">
+                    </div>
+
+                    <div class="image_box">
+                        <img src="메뉴음식사진/모수/모수_음식2.png" alt="" id="pic2">
+                    </div>
+
+                    <div class="image_box">
+                        <img src="메뉴음식사진/모수/모수_음식3.png" alt="" id="pic3">
+                    </div>
+
+                    <div class="image_box">
+                        <img src="메뉴음식사진/모수/모수_음식4.png" alt="" id="pic4">
+                    </div>
+
+                    <div class="image_box">
+                        <img src="메뉴음식사진/모수/모수_음식5.png" alt="" id="pic5">
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="reserve_button">
+            <div>
+                <a href="예약/쵸이닷.html">예약</a>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
