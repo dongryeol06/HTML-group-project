@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메뉴</title>
+    <title>리뷰</title>
     <style>
         * {
             margin: 0;
@@ -61,6 +61,34 @@
         a{
             color:white;
         }
+        .review_section{
+            margin:0 auto;
+            width:1900px;
+            height:auto;
+        }
+        .review_section .review div{
+            display: inline-block;
+            width:100%;
+        }
+        #person{
+            width:150px;
+            height:150px;
+        }
+        #stars{
+            width:200px;
+            height: 30px;
+        }
+        span{
+            color:white;
+        }
+
+        #food img{
+            width:300px;
+            height: 200px;
+        }
+
+
+        
     </style>
 </head>
 <body>
@@ -91,8 +119,50 @@
             </div>
         </div>
 
-        <div style="width:80%; margin:0 auto;">
+        <div style="width:30%; margin:0 auto; margin-bottom:30px;">
             <hr>
+        </div>
+
+            <div class="review_section">
+
+                <div>
+                    <div class="review" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px; color: white;">
+                    <!-- 유저 사진 -->
+                    <img src="리뷰/손님리뷰.png" alt="손님1" id="person" style="border-radius: 50%; width: 60px; height: 60px;">
+                    <div style="flex-grow: 1;">
+                        <!-- 유저 정보 + 별점 -->
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 5px;">
+                            <span style="font-weight: bold;">박보검</span>
+                            <span>2025.06.01</span>
+                            <img src="리뷰/5별점.png" alt="별 5 개" id="stars" style="width: 100px; height: auto;">
+                        </div>
+                        <!-- 리뷰 본문 -->
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img src="리뷰/음식사진.png" alt="음식 사진" style="width: 150px; height: 100px; border-radius: 8px;">
+                            <span style="font-size: 16px;">맛있어요! 추천합니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <div class="review" style="display: flex; gap: 20px; align-items: flex-start; padding: 20px; color: white;">
+                    <!-- 유저 사진 -->
+                    <img src="리뷰/손님리뷰.png" alt="손님1" id="person" style="border-radius: 50%; width: 60px; height: 60px;">
+                    <div style="flex-grow: 1;">
+                        <!-- 유저 정보 + 별점 -->
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 5px;">
+                            <span style="font-weight: bold;">박보검</span>
+                            <span>2025.06.01</span>
+                            <img src="리뷰/3별점.png" alt="별 3 개" id="stars" style="width: 100px; height: auto;">
+                        </div>
+                        <!-- 리뷰 본문 -->
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img src="리뷰/음식사진.png" alt="음식 사진" style="width: 150px; height: 100px; border-radius: 8px;">
+                            <span style="font-size: 16px;">맛있어요! 추천합니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
