@@ -1,280 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>셰프</title>
-    <style>
-        * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        box-sizing: border-box;
-        list-style: none;
-    }
-    a{
-        color:white;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>셰프 소개</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     @font-face {
-    font-family: 'Medium';
-    src: url(static/NotoSerifKR-Medium.ttf);
-    }
-    body{
-        background-color: black;
-        font-family: 'Medium';
+      font-family: 'Medium';
+      src: url(static/NotoSerifKR-Medium.ttf);
     }
 
-    .web{
-        height:2000px;
+    body {
+      background-color: black;
+      font-family: 'Medium';
+      color: white;
+      height: 3000px;
     }
 
-    .top div h2{
-            margin:0 auto;
-            border-bottom: 2px solid white;
-            text-align: center;
-            width:300px;
-            font-size: 30px;
-        }
-
-
-    .boxContainer{
-        display: flex;
-        justify-content: center;           
-        padding: 20px;
-        background-color: black;
+    .top {
+      width: 100%;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 50px;
     }
 
-    .boxContainer div{
-        text-align: center;
-        padding: 10px;
-        margin-left: 60px;
-        margin-right: 60px;
-        margin-bottom:20px;
-        margin-top:20px;
+    .top h2 {
+      font-size: 80px;
+      border-bottom: 4px solid white;
+      display: inline-block;
+      padding-bottom: 20px;
     }
 
-    .boxContainer div div{
-        border-radius: 20px;
-        border: 1px solid white;
+    .chef_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2500px;
+      gap: 80px;
+      padding: 0 100px;
     }
 
-
-    img{
-        width:400px;
-        height:600px;
-        padding:20px;
-        border-radius: 20px;
+    .arrow_btn {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
     }
 
-    figcaption{
-        color: white;
-        font-size: 20px;
-        
-        margin-top: 10px;
-    }
-    .middle{
-        background-color: white;
-        width:100%;
-        height:auto
-    }
-    h2{
-        text-align: center;
-        color:white;
-        font-size: 30px;
+    .chef_card {
+      display: flex;
+      width: 80%;
+      border: 3px solid #aaa;
+      padding: 60px;
+      gap: 60px;
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.5s ease;
     }
 
+    .chef_card.fade-out {
+      opacity: 0;
+    }
 
-.chef-section {
-    background-color: black;
-    color: white;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    border: 1px solid white;
-    width:2400px;
-    margin: 0 auto;
-    border-radius: 10px;
-}
+    .left_side, .right_side {
+      width: 50%;
+    }
 
-.chef-section .line{
-    width:300px;
-    margin:0 auto;
-    
-}
+    .left_side img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
 
-.chef {
-    display: flex;
-    justify-content: space-between;
-    gap:20px;
-    margin-bottom:100px;
-}
+    .left_side span {
+      display: block;
+      font-size: 60px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
 
-.chef-img img {
-    width: 400px;
-    height: auto;
-}
+    .right_side img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+      border-radius: 20px;
+    }
 
-
-.description{
-    width:800px;
-    line-height: 45px;
-}
-
-
-#chef_kwon:hover{
-    font-weight: bold;
-}
-#chef_lee:hover{
-    font-weight: bold;
-}
-#chef_anh:hover{
-    font-weight: bold;
-}
-#chef_choi:hover{
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.position {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-}
-
-
-
-</style>
+    .right_side h3 {
+      font-size: 30px;
+      line-height: 2;
+    }
+  </style>
 </head>
 <body>
-    <div class="web">
-        <div class="top">
-            <div>
-                <h2>셰프</h2>
-            </div>
-        </div>
+  <div class="top">
+    <h2>소개</h2>
+  </div>
 
-        <div class="boxContainer">
-            <div id="chef1">
-                <div>
-                    <img src="이미지/셰프/최현석 1.png" alt="최현석">
-                </div>
-                <hr>
-                <figure>
-                    <figcaption>최현석</figcaption>
-                </figure>
-            </div>
-            <div id="chef2">
-                <div>
-                    <img src="이미지/셰프/안성재 1.png" alt="안성재">
-                </div>
-                <hr>
-                <figure>
-                    <figcaption>안성재</figcaption>
-                </figure>
-            </div>
-            <div id="chef3">
-                <div>
-                    <img src="이미지/셰프/권성준(1) 1.png" alt="권성준">
-                </div>
-                <hr>
-                <figure>
-                    <figcaption>권성준</figcaption>
-                </figure>
-            </div>
-            <div id="chef4">
-                <div>
-                    <img src="이미지/셰프/에드워드 리(1) 1.png" alt="에드워드 리">
-                </div>
-                <hr>
-                <figure>
-                    <figcaption>에드워드 리</figcaption>
-                </figure>
-            </div>
-        </div>
+  <div class="chef_section">
+    <img src="Chevron left.png" class="arrow_btn" onclick="changeChef(-1)" alt="이전">
 
-
-
-        <div class="chef-section">
-            <div class="line">
-                <h2>셰프 소개</h2>
-                <hr>
-            </div>
-            <div class="chef" id="Choi">
-                <div class="chef_img">
-                    <img src="이미지/셰프/최현석 1.png" alt="최현석">
-                </div>
-                <div class="chef_info">
-                    <h3>최현석</h3>
-                    <hr style="width:150px; margin-bottom:15px;">
-                    <div>
-                        <p class="description">최현석 셰프는 클래식한 유럽 요리 기법에 현대적인 감성을 더해 독창적인 미식 세계를 펼쳐온 대한민국 대표 셰프입니다.<br>
-                            신라호텔 등 국내 최고급 호텔에서 경력을 시작한 그는, 프렌치와 이탈리안 요리를 기반으로 한 감각적인 플레이팅과 깊이 있는 맛으로 많은 미식가들의 사랑을 받아왔습니다.<br>
-                            엘본 더 테이블(Elbon the Table)의 총괄 셰프로 활동하며 이름을 알렸고, 이후 《냉장고를 부탁해》 등 다양한 요리 프로그램을 통해 대중에게 친숙한 셰프로 자리잡았습니다.<br>
-                            ‘감성 셰프’이자 ‘창조적 요리인’으로서, 요리에 대한 철학과 진정성을 바탕으로 끊임없이 도전하고 있습니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="chef" id="Anh">
-                <div class="chef-img" >
-                    <img src="이미지/셰프/안성재 1.png" alt="안성재">
-                </div>
-                <div class="chef_info">
-                    <h3>안성재</h3>
-                    <hr style="width:150px; margin-bottom:15px;">
-                    <div>
-                        <p class="description">안성재 셰프는 샌프란시스코에서 시작한 파인 다이닝 레스토랑 *모수(Mosu)*를 서울로 옮기며, 단기간에 국내 미쉐린 3스타 셰프로 자리매김한 인물입니다.<br>
-                            르 코르동 블루에서 요리의 기본기를 다지고, 세계적인 레스토랑에서 실력을 쌓은 그는,정통 유럽 요리의 기술 위에 한국적 감성과 계절의 아름다움을 더해, 오직 자신만의 스타일을 완성해왔습니다.<br>
-                            그의 요리는 단순한 미식이 아닌, 재료와 공간, 그리고 기억이 어우러지는 하나의 ‘경험’입니다.<br>
-                            섬세한 테크닉, 절제된 플레이팅, 그리고 깊은 여운이 남는 맛.모든 접시엔 그가 걸어온 시간과 철학이 담겨 있습니다.<br>
-                            현재도 셰프 안성재는 주방의 중심에서, 매일 고객 한 사람을 위한 진심 어린 한 끼를 준비하고 있습니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="chef" id="Kwon">
-                <div class="chef-img">
-                    <img src="이미지/셰프/권성준(1) 1.png" alt="권성준">
-                </div>
-                <div class="chef_info">
-                    <h3>권성준</h3>
-                    <hr style="width:150px; margin-bottom:15px;">
-                    <div>
-                        <p class="description">권성준 셰프는 이탈리아 국제요리학교 ALMA에서 본격적으로 요리 수업을 시작해, 미슐랭 3스타 Le Calandre와 2스타 Dani Maison에서의 수련을 통해 정통 이탈리아 요리의 깊이를 체득했습니다.<br>
-                            귀국 후 연남동과 청담동의 파인다이닝 레스토랑에서 실력을 다졌고, 2021년 직접 ‘Via Toledo Pastabar’를 오픈하며 자신만의 요리를 선보이기 시작했습니다.<br>
-                            그의 요리는 손으로 직접 뽑은 생면 파스타와 제철 재료로, 한 끼 식사를 넘어 감각적인 경험을 만들어냅니다.<br>
-                            “좋은 요리는 결국 사람을 향한다”는 신념 아래, 2023년엔 레스토랑을 용산으로 확장 이전하고 오너셰프로서 더 많은 사람들과 진심을 나누고 있습니다.<br>
-                            2024년에는 넷플릭스 요리 서바이벌 프로그램 *〈흑백요리사: 요리 계급 전쟁〉*에서 최종 우승하며 대중에게도 이름을 알렸습니다.<br> 
-                            그러나 그는 여전히 주방에서, 오늘도 ‘한 접시는 짧은 여행이어야 한다’는 철학을 담아 요리를 완성합니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="chef" id="Edward">
-                <div class="chef-img">
-                    <img src="이미지/셰프/에드워드 리(1) 1.png" alt="에드워드 리">
-                </div>
-                <div class="chef_info">
-                    <h3>에드워드 리</h3>
-                    <hr style="width:150px; margin-bottom:15px;">
-                    <div>
-                        <p class="description">전통과 실험 사이, 남부의 풍미에 아시아의 숨결을 더하다
-                            에드워드 리 셰프는 뉴욕에서 태어나 한국계 미국인으로 자라며 동서양의 미각을 함께 경험했습니다.<br>
-                            그는 미국 남부 요리에 대한 깊은 애정과 아시아의 감각을 조화롭게 결합해, 자신만의 독창적인 요리 세계를 구축해왔습니다.<br>
-                            루이빌에 위치한 대표 레스토랑 610 Magnolia를 비롯해 MilkWood, Whiskey Dry 등을 통해 미국 남부 음식의 전통을 재해석했고,<br>다큐멘터리 〈Mind of a Chef〉와 다양한 저서를 통해 셰프로서의 철학과 문화적 메시지를 전달하고 있습니다.<br>
-                            그에게 요리는 단순한 음식이 아닌, 정체성과 이야기를 나누는 수단입니다.<br>
-                            에드워드 리 셰프는 오늘도 주방에서, 문화의 경계를 넘나드는 깊은 맛을 만들어갑니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="chef_card" id="chef_card">
+      <div class="left_side">
+        <span id="chef_name">최현석</span>
+        <img src="이미지/셰프/최현석 1.png" id="chef_img" alt="셰프 사진">
+      </div>
+      <div class="right_side">
+        <img src="이미지/메뉴음식사진/최현석 음식.png" id="dish_img" alt="음식 사진">
+        <h3 id="chef_desc">
+          최현석 셰프는 클래식한 유럽 요리 기법에 현대적인 감성을 더해 독창적인 미식 세계를 펼쳐온 대한민국 대표 셰프입니다. <br><br>
+          신라호텔 등 국내 최고급 호텔에서 경력을 시작한 그는, <br><br>
+          프렌치와 이탈리안 요리를 기반으로 한 감각적인 플레이팅과 깊이 있는 맛으로 많은 미식가들의 사랑을 받아왔습니다. <br><br>
+          엘본 더 테이블(Elbon the Table)의 총괄 셰프로 활동하며 이름을 알렸고, <br><br>
+          이후 《냉장고를 부탁해》 등 다양한 요리 프로그램을 통해 대중에게 친숙한 셰프로 자리잡았습니다. <br><br>
+          ‘감성 셰프’이자 ‘창조적 요리인’으로서, 요리에 대한 철학과 진정성을 바탕으로 끊임없이 도전하고 있습니다.
+        </h3>
+      </div>
     </div>
+
+    <img src="Chevron left (1).png" class="arrow_btn" onclick="changeChef(1)" alt="다음">
+  </div>
+
+  <script>
+    const chefs = [
+      {
+        name: '최현석',
+        chefImg: '이미지/셰프/최현석 1.png',
+        foodImg: '이미지/메뉴음식사진/최현석 음식.png',
+        desc: `최현석 셰프는 클래식한 유럽 요리 기법에 현대적인 감성을 더해 독창적인 미식 세계를 펼쳐온 대한민국 대표 셰프입니다. <br><br>
+        신라호텔 등 국내 최고급 호텔에서 경력을 시작한 그는, <br><br>
+        프렌치와 이탈리안 요리를 기반으로 한 감각적인 플레이팅과 깊이 있는 맛으로 많은 미식가들의 사랑을 받아왔습니다. <br><br>
+        엘본 더 테이블(Elbon the Table)의 총괄 셰프로 활동하며 이름을 알렸고, <br><br>
+        이후 《냉장고를 부탁해》 등 다양한 요리 프로그램을 통해 대중에게 친숙한 셰프로 자리잡았습니다. <br><br>
+        ‘감성 셰프’이자 ‘창조적 요리인’으로서, 요리에 대한 철학과 진정성을 바탕으로 끊임없이 도전하고 있습니다.`
+      },
+      {
+        name: '에드워드 리',
+        chefImg: '이미지/셰프/에드워드 리(1) 1.png',
+        foodImg: '이미지/메뉴음식사진/최현석 음식.png',
+        desc: `전통과 실험 사이, 남부의 풍미에 아시아의 숨결을 더하다
+        에드워드 리 셰프는 뉴욕에서 태어나 한국계 미국인으로 자라며 동서양의 미각을 함께 경험했습니다. 그는 미국 남부 요리에 대한 깊은 애정과 아시아의 감각을 조화롭게 결합해, 자신만의 독창적인 요리 세계를 구축해왔습니다. <br><br>
+        루이빌에 위치한 대표 레스토랑 610 Magnolia를 비롯해 MilkWood, Whiskey Dry 등을 통해 미국 남부 음식의 전통을 재해석했고, 다큐멘터리 〈Mind of a Chef〉와 다양한 저서를 통해 셰프로서의 철학과 문화적 메시지를 전달하고 있습니다. <br><br>
+        그에게 요리는 단순한 음식이 아닌, 정체성과 이야기를 나누는 수단입니다. 에드워드 리 셰프는 오늘도 주방에서, 문화의 경계를 넘나드는 깊은 맛을 만들어갑니다.`
+      },
+      {
+        name: '안성재',
+        chefImg: '이미지/셰프/안성재 1.png',
+        foodImg: '이미지/메뉴음식사진/최현석 음식.png',
+        desc: `안성재 셰프는 샌프란시스코에서 시작한 파인 다이닝 레스토랑 *모수(Mosu)*를 서울로 옮기며, 단기간에 국내 미쉐린 3스타 셰프로 자리매김한 인물입니다. <br><br> 
+        르 코르동 블루에서 요리의 기본기를 다지고, 세계적인 레스토랑에서 실력을 쌓은 그는, <br><br> 정통 유럽 요리의 기술 위에 한국적 감성과 계절의 아름다움을 더해, 오직 자신만의 스타일을 완성해왔습니다.
+        그의 요리는 단순한 미식이 아닌, 재료와 공간, 그리고 기억이 어우러지는 하나의 ‘경험’입니다. 섬세한 테크닉, 절제된 플레이팅, 그리고 깊은 여운이 남는 맛. <br><br> 모든 접시엔 그가 걸어온 시간과 철학이 담겨 있습니다.
+        현재도 셰프 안성재는 주방의 중심에서, 매일 고객 한 사람을 위한 진심 어린 한 끼를 준비하고 있습니다.`
+      },
+      {
+        name: '권성준',
+        chefImg: '이미지/셰프/권성준(1) 1.png',
+        foodImg: '이미지/메뉴음식사진/최현석 음식.png',
+        desc: `권성준 셰프는 이탈리아 국제요리학교 ALMA에서 본격적으로 요리 수업을 시작해, 미슐랭 3스타 Le Calandre와 2스타 Dani Maison에서의 수련을 통해 정통 이탈리아 요리의 깊이를 체득했습니다. <br><br> 
+        귀국 후 연남동과 청담동의 파인다이닝 레스토랑에서 실력을 다졌고, 2021년 직접 ‘Via Toledo Pastabar’를 오픈하며 자신만의 요리를 선보이기 시작했습니다.
+        그의 요리는 손으로 직접 뽑은 생면 파스타와 제철 재료로, 한 끼 식사를 넘어 감각적인 경험을 만들어냅니다. <br><br> 
+        “좋은 요리는 결국 사람을 향한다”는 신념 아래, 2023년엔 레스토랑을 용산으로 확장 이전하고 오너셰프로서 더 많은 사람들과 진심을 나누고 있습니다.
+        2024년에는 넷플릭스 요리 서바이벌 프로그램 *〈흑백요리사: 요리 계급 전쟁〉*에서 최종 우승하며 대중에게도 이름을 알렸습니다. 그러나 그는 여전히 주방에서, 오늘도 ‘한 접시는 짧은 여행이어야 한다’는 철학을 담아 요리를 완성합니다.`
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function changeChef(direction) {
+      const card = document.getElementById('chef_card');
+      card.classList.add('fade-out');
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + direction + chefs.length) % chefs.length;
+        const chef = chefs[currentIndex];
+        document.getElementById('chef_name').textContent = chef.name;
+        document.getElementById('chef_img').src = chef.chefImg;
+        document.getElementById('dish_img').src = chef.foodImg;
+        document.getElementById('chef_desc').innerHTML = chef.desc;
+
+        card.classList.remove('fade-out');
+      }, 500);
+    }
+  </script>
 </body>
 </html>
