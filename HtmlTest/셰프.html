@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>셰프 소개</title>
   <style>
+    /* 기본 스타일 초기화 및 박스 모델 설정 */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* 사용자 지정 폰트 등록 */
     @font-face {
       font-family: 'Medium';
       src: url(static/NotoSerifKR-Medium.ttf);
     }
 
+    /* 전체 페이지 기본 스타일 */
     body {
       background-color: black;
       font-family: 'Medium';
@@ -23,6 +26,7 @@
       height: 3000px;
     }
 
+    /* 상단 제목 영역 */
     .top {
       width: 100%;
       text-align: center;
@@ -37,21 +41,24 @@
       padding-bottom: 20px;
     }
 
+    /* 셰프 소개 섹션 전체 레이아웃 */
     .chef_section {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 2500px;
+      height: 1800px;
       gap: 80px;
       padding: 0 100px;
     }
 
+    /* 좌우 화살표 버튼 */
     .arrow_btn {
       width: 80px;
       height: 80px;
       cursor: pointer;
     }
 
+    /* 셰프 카드 (이름, 사진, 설명 포함) */
     .chef_card {
       display: flex;
       width: 80%;
@@ -63,6 +70,7 @@
       transition: opacity 0.5s ease;
     }
 
+    /* 페이드 아웃 효과 클래스 */
     .chef_card.fade-out {
       opacity: 0;
     }
@@ -71,12 +79,14 @@
       width: 50%;
     }
 
+    /* 셰프 사진 */
     .left_side img {
       width: 100%;
       height: auto;
       border-radius: 20px;
     }
 
+    /* 셰프 이름 */
     .left_side span {
       display: block;
       font-size: 60px;
@@ -84,6 +94,7 @@
       text-align: center;
     }
 
+    /* 요리 사진 */
     .right_side img {
       width: 100%;
       height: auto;
@@ -91,6 +102,7 @@
       border-radius: 20px;
     }
 
+    /* 셰프 설명 글 */
     .right_side p {
       font-size: 20px;
       line-height: 2;
@@ -98,13 +110,17 @@
   </style>
 </head>
 <body>
+  <!-- 상단 제목 영역 -->
   <div class="top">
     <h2>소개</h2>
   </div>
 
+  <!-- 셰프 정보 영역 (슬라이드 형식) -->
   <div class="chef_section">
+    <!-- 왼쪽 화살표 -->
     <img src="이미지/왼쪽.png" class="arrow_btn" onclick="changeChef(-1)" alt="이전">
 
+    <!-- 셰프 카드 -->
     <div class="chef_card" id="chef_card">
       <div class="left_side">
         <span id="chef_name">최현석</span>
@@ -113,79 +129,119 @@
       <div class="right_side">
         <img src="이미지/메뉴음식사진/최현석 음식.png" id="dish_img" alt="음식 사진">
         <p id="chef_desc">
-          최현석 셰프는 클래식한 유럽 요리 기법에 현대적인 감성을 더해 독창적인 미식 세계를 펼쳐온 대한민국 대표 셰프입니다. <br>
-          신라호텔 등 국내 최고급 호텔에서 경력을 시작한 그는, <br>
-          프렌치와 이탈리안 요리를 기반으로 한 감각적인 플레이팅과 깊이 있는 맛으로 많은 미식가들의 사랑을 받아왔습니다. <br>
-          엘본 더 테이블(Elbon the Table)의 총괄 셰프로 활동하며 이름을 알렸고, <br>
-          이후 《냉장고를 부탁해》 등 다양한 요리 프로그램을 통해 대중에게 친숙한 셰프로 자리잡았습니다. <br>
-          ‘감성 셰프’이자 ‘창조적 요리인’으로서, 요리에 대한 철학과 진정성을 바탕으로 끊임없이 도전하고 있습니다.
+          <!-- 셰프 설명 텍스트 -->
+          최현석 셰프는 ...
         </p>
       </div>
     </div>
 
+    <!-- 오른쪽 화살표 -->
     <img src="이미지/오른쪽.png" class="arrow_btn" onclick="changeChef(1)" alt="다음">
   </div>
 
+  <!-- JavaScript: 셰프 정보 변경 기능 -->
   <script>
+    // 셰프 정보 배열
     const chefs = [
       {
         name: '최현석',
         chefImg: '이미지/셰프/최현석 1.png',
         foodImg: '이미지/메뉴음식사진/최현석 음식.png',
-        desc: `최현석 셰프는 클래식한 유럽 요리 기법에 현대적인 감성을 더해 독창적인 미식 세계를 펼쳐온 대한민국 대표 셰프입니다. <br>
-        신라호텔 등 국내 최고급 호텔에서 경력을 시작한 그는, <br>
-        프렌치와 이탈리안 요리를 기반으로 한 감각적인 플레이팅과 깊이 있는 맛으로 많은 미식가들의 사랑을 받아왔습니다. <br>
-        엘본 더 테이블(Elbon the Table)의 총괄 셰프로 활동하며 이름을 알렸고, <br>
-        이후 《냉장고를 부탁해》 등 다양한 요리 프로그램을 통해 대중에게 친숙한 셰프로 자리잡았습니다. <br>
-        ‘감성 셰프’이자 ‘창조적 요리인’으로서, 요리에 대한 철학과 진정성을 바탕으로 끊임없이 도전하고 있습니다.`
+        desc: `최현석 셰프는 ...`
       },
       {
         name: '에드워드 리',
         chefImg: '이미지/셰프/에드워드 리(1) 1.png',
         foodImg: '이미지/메뉴음식사진/최현석 음식.png',
-        desc: `전통과 실험 사이, 남부의 풍미에 아시아의 숨결을 더하다
-        에드워드 리 셰프는 뉴욕에서 태어나 한국계 미국인으로 자라며 동서양의 미각을 함께 경험했습니다. 그는 미국 남부 요리에 대한 깊은 애정과 아시아의 감각을 조화롭게 결합해, 자신만의 독창적인 요리 세계를 구축해왔습니다. <br>
-        루이빌에 위치한 대표 레스토랑 610 Magnolia를 비롯해 MilkWood, Whiskey Dry 등을 통해 미국 남부 음식의 전통을 재해석했고, 다큐멘터리 〈Mind of a Chef〉와 다양한 저서를 통해 셰프로서의 철학과 문화적 메시지를 전달하고 있습니다. <br>
-        그에게 요리는 단순한 음식이 아닌, 정체성과 이야기를 나누는 수단입니다. 에드워드 리 셰프는 오늘도 주방에서, 문화의 경계를 넘나드는 깊은 맛을 만들어갑니다.`
+        desc: `에드워드 리 셰프는 ...`
       },
       {
         name: '안성재',
         chefImg: '이미지/셰프/안성재 1.png',
         foodImg: '이미지/메뉴음식사진/최현석 음식.png',
-        desc: `안성재 셰프는 샌프란시스코에서 시작한 파인 다이닝 레스토랑 *모수(Mosu)*를 서울로 옮기며, 단기간에 국내 미쉐린 3스타 셰프로 자리매김한 인물입니다. <br>
-        르 코르동 블루에서 요리의 기본기를 다지고, 세계적인 레스토랑에서 실력을 쌓은 그는, <br> 정통 유럽 요리의 기술 위에 한국적 감성과 계절의 아름다움을 더해, 오직 자신만의 스타일을 완성해왔습니다.
-        그의 요리는 단순한 미식이 아닌, 재료와 공간, 그리고 기억이 어우러지는 하나의 ‘경험’입니다. 섬세한 테크닉, 절제된 플레이팅, 그리고 깊은 여운이 남는 맛. <br>모든 접시엔 그가 걸어온 시간과 철학이 담겨 있습니다.
-        현재도 셰프 안성재는 주방의 중심에서, 매일 고객 한 사람을 위한 진심 어린 한 끼를 준비하고 있습니다.`
+        desc: `안성재 셰프는 ...`
       },
       {
         name: '권성준',
         chefImg: '이미지/셰프/권성준(1) 1.png',
         foodImg: '이미지/메뉴음식사진/최현석 음식.png',
-        desc: `권성준 셰프는 이탈리아 국제요리학교 ALMA에서 본격적으로 요리 수업을 시작해, 미슐랭 3스타 Le Calandre와 2스타 Dani Maison에서의 수련을 통해 정통 이탈리아 요리의 깊이를 체득했습니다. <br>
-        귀국 후 연남동과 청담동의 파인다이닝 레스토랑에서 실력을 다졌고, 2021년 직접 'Via Toledo Pastabar'를 오픈하며 자신만의 요리를 선보이기 시작했습니다.
-        그의 요리는 손으로 직접 뽑은 생면 파스타와 제철 재료로, 한 끼 식사를 넘어 감각적인 경험을 만들어냅니다. <br>
-        “좋은 요리는 결국 사람을 향한다”는 신념 아래, 2023년엔 레스토랑을 용산으로 확장 이전하고 오너셰프로서 더 많은 사람들과 진심을 나누고 있습니다.
-        2024년에는 넷플릭스 요리 서바이벌 프로그램 *〈흑백요리사: 요리 계급 전쟁〉*에서 최종 우승하며 대중에게도 이름을 알렸습니다. 그러나 그는 여전히 주방에서, 오늘도 ‘한 접시는 짧은 여행이어야 한다’는 철학을 담아 요리를 완성합니다.`
+        desc: `권성준 셰프는 ...`
       }
     ];
 
+    // 현재 보여지는 셰프 인덱스
     let currentIndex = 0;
 
+    // 셰프 카드 전환 함수
     function changeChef(direction) {
       const card = document.getElementById('chef_card');
-      card.classList.add('fade-out');
+      card.classList.add('fade-out'); // 사라지는 애니메이션 추가
 
       setTimeout(() => {
+        // 다음 셰프 인덱스로 변경
         currentIndex = (currentIndex + direction + chefs.length) % chefs.length;
         const chef = chefs[currentIndex];
+
+        // 정보 업데이트
         document.getElementById('chef_name').textContent = chef.name;
         document.getElementById('chef_img').src = chef.chefImg;
         document.getElementById('dish_img').src = chef.foodImg;
         document.getElementById('chef_desc').innerHTML = chef.desc;
 
-        card.classList.remove('fade-out');
-      }, 500);
+        card.classList.remove('fade-out'); // 다시 나타나게
+      }, 500); // 애니메이션 시간 (0.5초)
     }
   </script>
+
+  <!-- 셰프 경력 요약 테이블 -->
+  <div style="padding: 100px; background-color: #111; color: white;">
+    <h2 style="font-size: 50px; text-align: center; margin-bottom: 50px; border-bottom: 2px solid white; display: inline-block;">셰프 주요 경력</h2>
+    <div style="margin-top: 60px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 20px; line-height: 1.8;">
+        <thead>
+          <tr style="border-bottom: 2px solid #aaa;">
+            <th style="padding: 20px; text-align: left;">이름</th>
+            <th style="padding: 20px; text-align: left;">주요 경력</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 각 셰프의 경력 정보 -->
+          <tr style="border-bottom: 1px solid #555;">
+            <td style="padding: 20px;">최현석</td>
+            <td style="padding: 20px;">
+              - 신라호텔 근무<br>
+              - 엘본 더 테이블 총괄 셰프<br>
+              - 《냉장고를 부탁해》 등 방송 출연
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #555;">
+            <td style="padding: 20px;">에드워드 리</td>
+            <td style="padding: 20px;">
+              - 610 Magnolia, MilkWood, Whiskey Dry 운영<br>
+              - 다큐 <Mind of a Chef> 출연<br>
+              - 요리 관련 저서 다수 출간
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #555;">
+            <td style="padding: 20px;">안성재</td>
+            <td style="padding: 20px;">
+              - *Mosu* 서울 이전 및 미쉐린 3스타 획득<br>
+              - 르 코르동 블루 수료<br>
+              - 해외 유명 레스토랑 근무 경력
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px;">권성준</td>
+            <td style="padding: 20px;">
+              - ALMA 요리학교 수료<br>
+              - Le Calandre, Dani Maison 근무<br>
+              - Via Toledo Pastabar 설립 및 운영<br>
+              - 넷플릭스 *흑백요리사* 최종 우승
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

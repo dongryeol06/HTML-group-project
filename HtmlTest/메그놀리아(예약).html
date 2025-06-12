@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>예약</title>
+
   <style>
+    /* 사용자 정의 폰트 불러오기 */
     @font-face {
       font-family: 'Medium';
       src: url('NotoSerifKR-Medium.ttf');
     }
 
+    /* 전체 페이지 기본 스타일 */
     body {
       margin: 0;
       font-family: 'Medium';
@@ -16,11 +19,11 @@
       color: #f5f5f5;
     }
 
+    /* 상단 타이틀 영역 */
     .top {
       width: 100%;
       text-align: center;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 50px 0;
     }
 
     .top h2 {
@@ -29,6 +32,37 @@
       display: inline-block;
     }
 
+    /* 레스토랑 이미지 및 이름 */
+    .choi {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .choi img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .choi h2 {
+      border-bottom: none;
+    }
+
+    /* 운영 시간 및 위치 정보 영역 */
+    .time_date {
+      max-width: 800px;
+      margin: 50px auto;
+      border: 1px solid #999;
+      padding: 40px;
+      background-color: rgb(48, 48, 48);
+    }
+
+    .time_date div {
+      border-bottom: 1px solid white;
+      padding: 20px;
+    }
+
+    /* 예약 폼 전체 박스 */
     .reservation-box {
       max-width: 800px;
       margin: 50px auto;
@@ -37,6 +71,7 @@
       background-color: rgb(48, 48, 48);
     }
 
+    /* 폼 그룹 묶음 */
     fieldset {
       border: none;
       margin-bottom: 40px;
@@ -48,6 +83,7 @@
       padding: 0 10px;
     }
 
+    /* 한 줄에 두 개씩 정렬 (반응형 포함) */
     .row {
       display: flex;
       justify-content: space-between;
@@ -67,6 +103,7 @@
       margin-bottom: 10px;
     }
 
+    /* 인풋 필드 스타일 */
     input {
       background-color: transparent;
       border: none;
@@ -77,17 +114,20 @@
       transition: border-color 0.3s;
     }
 
+    /* 포커스 시 테두리 색 변경 */
     input:focus {
       outline: none;
       border-color: #fff;
     }
 
+    /* 하단 버튼 영역 */
     .submit-btn {
       display: flex;
       justify-content: flex-end;
       margin-top: 30px;
     }
 
+    /* 버튼 스타일 */
     a {
       padding: 12px 40px;
       background-color: transparent;
@@ -98,99 +138,96 @@
       border-radius: 8px;
       transition: background-color 0.3s;
       text-decoration: none;
-      margin-left:10px;
+      margin-left: 10px;
     }
 
     a:hover {
       background-color: white;
-      color:black;
+      color: black;
     }
 
+    /* 모바일 대응 (600px 이하) */
     @media (max-width: 600px) {
       .form-group {
         width: 100%;
       }
     }
 
-    .choi img{
-        width:400px;
-        height:400px;
-    }
-    .choi{
-        margin:0 auto;
-        text-align: center;
-        padding-top:100px;
-    }
-    .choi h2{
-        border-bottom:none;
-    }
-    .time_date{
-        max-width: 800px;
-        margin: 50px auto;
-        border: 1px solid #999;
-        padding: 40px;
-        background-color: rgb(48, 48, 48);
-    }
-    .time_date div{
-        border-bottom: 1px solid white;
-        padding: 20px;
-    }
   </style>
 </head>
+
 <body>
-        <div class="top">
-          <h2>예약 시간 및 정보</h2>
-        </div>
-        <div class="choi">
-            <img src="이미지/메그놀리아.png" alt="">
-            <h2>메그놀리아</h2>
-        </div>
+  <!-- 상단 제목 -->
+  <div class="top">
+    <h2>예약 시간 및 정보</h2>
+  </div>
 
-        <div class="time_date">
-            <div>
-                <span>운영시간</span>
-                <span>매일 12:00 ~ 22:00 (브레이크타임: 15:00 ~ 18:00)</span>
-            </div>
+  <!-- 레스토랑 이미지 및 이름 표시 -->
+  <div class="choi">
+    <img src="이미지/메그놀리아.png" alt="">
+    <h2>메그놀리아</h2>
+  </div>
 
-            <div>
-                <span>위치</span>
-                <span>서울 강남구 도산대로 457 3층</span>
-            </div>
+  <!-- 운영 시간 및 위치 정보 표시 -->
+  <div class="time_date">
+    <div>
+      <span>운영시간</span>
+      <span>화요일-토요일, 오후 5시 - 10시</span>
+    </div>
+    <div>
+      <span>위치</span>
+      <span>610 W Magnolia Ave, Louisville, KY 40208 미국</span>
+    </div>
+  </div>
 
-        </div>
-
-    <div class="reservation-box">
+  <!-- 예약 입력 폼 -->
+  <div class="reservation-box">
     <fieldset>
       <legend>예약 정보</legend>
       <div class="row">
+        <!-- 성 -->
         <div class="form-group">
           <label for="last_name">성</label>
           <input type="text" name="last_name" required>
         </div>
+
+        <!-- 이름 -->
         <div class="form-group">
           <label for="first_name">이름</label>
           <input type="text" name="first_name" required>
         </div>
+
+        <!-- 이메일 -->
         <div class="form-group">
           <label for="email">이메일</label>
           <input type="email" name="email">
         </div>
+
+        <!-- 전화번호 -->
         <div class="form-group">
           <label for="phone">전화번호</label>
           <input type="number" name="phone" required>
         </div>
+
+        <!-- 날짜 -->
         <div class="form-group">
           <label for="date">날짜</label>
           <input type="date" id="date" name="date" required>
         </div>
+
+        <!-- 시간 -->
         <div class="form-group">
           <label for="time">시간</label>
           <input type="time" id="time" name="time" required>
         </div>
+
+        <!-- 아이 수 -->
         <div class="form-group">
           <label for="child">아이</label>
           <input type="number" id="child" name="child" min="0" required>
         </div>
+
+        <!-- 성인 수 -->
         <div class="form-group">
           <label for="adult">성인</label>
           <input type="number" id="adult" name="adult" min="1" required>
@@ -198,11 +235,11 @@
       </div>
     </fieldset>
 
+    <!-- 버튼: 예약하기 / 돌아가기 -->
     <div class="submit-btn">
-      <a href="#">예약하기</a>
+      <a href="#">예약하기</a> <!-- 실제 예약 처리 연결 필요 -->
       <a href="예약.html">돌아가기</a>
     </div>
   </div>
-
 </body>
 </html>
