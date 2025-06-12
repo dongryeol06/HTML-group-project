@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예약</title>
+
+  <link rel="stylesheet" href="CSS/메그놀리아(예약).css">
+</head>
+
+<body>
+  <!-- 상단 제목 -->
+  <div class="top">
+    <h2>예약 시간 및 정보</h2>
+  </div>
+
+  <!-- 레스토랑 이미지 및 이름 표시 -->
+  <div class="choi">
+    <img src="이미지/메그놀리아.png" alt="">
+    <h2>메그놀리아</h2>
+  </div>
+
+  <!-- 운영 시간 및 위치 정보 표시 -->
+  <div class="time_date">
+    <div>
+      <span>운영시간</span>
+      <span>화요일-토요일, 오후 5시 - 10시</span>
+    </div>
+    <div>
+      <span>위치</span>
+      <span>610 W Magnolia Ave, Louisville, KY 40208 미국</span>
+    </div>
+  </div>
+
+  <!-- 예약 입력 폼 -->
+  <div class="reservation-box">
+    <form action="">
+      <fieldset>
+        <legend>예약 정보</legend>
+        <div class="row">
+          <!-- 성 -->
+          <div class="form-group">
+            <label for="last_name">성</label>
+            <input type="text" name="last_name" required>
+          </div>
+  
+          <!-- 이름 -->
+          <div class="form-group">
+            <label for="first_name">이름</label>
+            <input type="text" name="first_name" required>
+          </div>
+  
+          <!-- 이메일 -->
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" name="email">
+          </div>
+  
+          <!-- 전화번호 -->
+          <div class="form-group">
+            <label for="phone">전화번호</label>
+            <input type="number" name="phone" required>
+          </div>
+  
+          <!-- 날짜 -->
+          <div class="form-group">
+            <label for="date">날짜</label>
+            <input type="date" id="date" name="date" min="2025-06-12" required>
+          </div>
+  
+          <!-- 시간 -->
+          <div class="form-group">
+            <label for="time">시간</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+  
+          <!-- 아이 수 -->
+          <div class="form-group">
+            <label for="child">아이</label>
+            <input type="number" id="child" name="child" min="0" max="5" required>
+          </div>
+  
+          <!-- 성인 수 -->
+          <div class="form-group">
+            <label for="adult">성인</label>
+            <input type="number" id="adult" name="adult" min="1" max="5" required>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- 버튼: 예약하기 / 돌아가기 -->
+    <div class="submit-btn">
+      <button type="submit">예약하기</button>
+      <a href="예약.html">돌아가기</a>
+    </div>
+  </div>
+</body>
+</html>

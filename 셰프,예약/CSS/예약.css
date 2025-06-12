@@ -1,0 +1,95 @@
+/* 기본 마진/패딩 제거, 박스 모델 설정 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 사용자 정의 폰트 등록 */
+    @font-face {
+      font-family: 'Medium';
+      src: url(static/NotoSerifKR-Medium.ttf);
+    }
+
+    /* 전체 바디 스타일 */
+    body {
+      background-color: black;
+      font-family: 'Medium';
+      color: white;
+      height: 3000px;
+    }
+
+    /* 상단 타이틀 영역 */
+    .top {
+      width: 100%;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .top h2 {
+      font-size: 80px;
+      border-bottom: 4px solid white;
+      display: inline-block;
+      padding-bottom: 20px;
+    }
+
+    /* 전체 콘텐츠 래퍼 */
+    .container {
+      max-width: 1600px;
+      margin: 150px auto;
+    }
+
+    /* 레스토랑 카드 행 (2개씩 배치) */
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 500px;
+    }
+
+    /* 개별 레스토랑 카드 */
+    .restaurant-card {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 레스토랑 이미지 스타일 */
+    .restaurant-card img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 30px;
+      margin-bottom: 40px;
+    }
+
+    /* 레스토랑 이름 스타일 */
+    .restaurant-name {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+
+    /* 버튼 묶음 (예약, 위치) */
+    .button-group {
+      display: flex;
+      gap: 40px;
+    }
+
+    /* 버튼 스타일 (링크처럼 보이게) */
+    .button-group a {
+      background-color: transparent;
+      color: white;
+      border: 3px solid white;
+      padding: 20px 50px;
+      font-size: 28px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    /* 버튼 hover 시 반전 효과 */
+    .button-group a:hover {
+      background-color: white;
+      color: black;
+    }

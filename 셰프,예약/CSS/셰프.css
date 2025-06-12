@@ -1,0 +1,101 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 사용자 지정 폰트 등록 */
+    @font-face {
+      font-family: 'Medium';
+      src: url(static/NotoSerifKR-Medium.ttf);
+    }
+
+    /* 전체 페이지 기본 스타일 */
+    body {
+      background-color: black;
+      font-family: 'Medium';
+      color: white;
+      height: 3000px;
+    }
+
+    /* 상단 제목 영역 */
+    .top {
+      width: 100%;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .top h2 {
+      font-size: 80px;
+      border-bottom: 4px solid white;
+      display: inline-block;
+      padding-bottom: 20px;
+    }
+
+    /* 셰프 소개 섹션 전체 레이아웃 */
+    .chef_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1800px;
+      gap: 80px;
+      padding: 0 100px;
+    }
+
+    /* 좌우 화살표 버튼 */
+    .arrow_btn {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    /* 셰프 카드 (이름, 사진, 설명 포함) */
+    .chef_card {
+      display: flex;
+      width: 80%;
+      border: 3px solid #aaa;
+      padding: 60px;
+      gap: 60px;
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    /* 페이드 아웃 효과 클래스 */
+    .chef_card.fade-out {
+      opacity: 0;
+    }
+
+    .left_side, .right_side {
+      width: 50%;
+    }
+
+    /* 셰프 사진 */
+    .left_side img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    /* 셰프 이름 */
+    .left_side span {
+      display: block;
+      font-size: 60px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* 요리 사진 */
+    .right_side img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+      border-radius: 20px;
+    }
+
+    /* 셰프 설명 글 */
+    .right_side p {
+      font-size: 30px;
+      line-height: 2;
+    }
