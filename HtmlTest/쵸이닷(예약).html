@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예약</title>
+  <style>
+    @font-face {
+      font-family: 'Medium';
+      src: url('NotoSerifKR-Medium.ttf');
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Medium';
+      background-color: black;
+      color: #f5f5f5;
+    }
+
+    .top {
+      width: 100%;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .top h2 {
+      font-size: 80px;
+      border-bottom: 4px solid white;
+      display: inline-block;
+    }
+
+    .reservation-box {
+      max-width: 800px;
+      margin: 50px auto;
+      border: 1px solid #999;
+      padding: 40px;
+      background-color: rgb(48, 48, 48);
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 40px;
+    }
+
+    legend {
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      min-width: 200px;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 4px;
+      color: white;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #fff;
+    }
+
+    .submit-btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 30px;
+    }
+
+    a {
+      padding: 12px 40px;
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      margin-left:10px;
+    }
+
+    a:hover {
+      background-color: white;
+      color:black;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        width: 100%;
+      }
+    }
+
+    .choi img{
+        width:400px;
+        height:400px;
+    }
+    .choi{
+        margin:0 auto;
+        text-align: center;
+        padding-top:10px;
+    }
+    .choi h2{
+        border-bottom:none;
+    }
+    .time_date{
+        max-width: 800px;
+        margin: 50px auto;
+        border: 1px solid #999;
+        padding: 40px;
+        background-color: rgb(48, 48, 48);
+    }
+    .time_date div{
+        border-bottom: 1px solid white;
+        padding: 20px;
+    }
+  </style>
+</head>
+<body>
+        <div class="top">
+          <h2>예약 시간 및 정보</h2>
+        </div>
+        <div class="choi">
+            <img src="이미지\쵸이닷.png" alt="">
+            <h2>쵸이닷</h2>
+        </div>
+
+        <div class="time_date">
+            <div>
+                <span>운영시간</span>
+                <span>매일 12:00 ~ 22:00 (브레이크타임: 15:00 ~ 18:00)</span>
+            </div>
+
+            <div>
+                <span>위치</span>
+                <span>서울 강남구 도산대로 457 3층</span>
+            </div>
+
+        </div>
+
+    <div class="reservation-box">
+    <fieldset>
+      <legend>예약 정보</legend>
+      <div class="row">
+        <div class="form-group">
+          <label for="last_name">성</label>
+          <input type="text" name="last_name" required>
+        </div>
+        <div class="form-group">
+          <label for="first_name">이름</label>
+          <input type="text" name="first_name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="phone">전화번호</label>
+          <input type="number" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="date">날짜</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">시간</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+          <label for="child">아이</label>
+          <input type="number" id="child" name="child" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="adult">성인</label>
+          <input type="number" id="adult" name="adult" min="1" required>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="submit-btn">
+      <a href="#">예약하기</a>
+      <a href="예약.html">돌아가기</a>
+    </div>
+  </div>
+
+</body>
+</html>
