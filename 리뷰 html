@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Dining Reviews</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .header {
+      background-color: #1d002f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .header h1 {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      margin: 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 10px;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .lang {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+    }
+
+    /* 탭 관련 스타일 */
+      .tabs {
+      background-color: #1d1b1b;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .tab-labels {
+      display: flex;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .tabs label:hover {
+      font-weight: bold;
+    }
+
+    .tab-item.active {
+  background-color: white;        
+  color: black;                              
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .tabs label {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: white;
+      color: black;
+    }
+
+    .review-section {
+      background-color: #1d1b1b;
+      color: white;
+      padding: 20px;
+    }
+
+    .reviews {
+      display: none;
+    }
+
+    #tab1:checked ~ .review-section .r1,
+    #tab2:checked ~ .review-section .r2,
+    #tab3:checked ~ .review-section .r3,
+    #tab4:checked ~ .review-section .r4 {
+      display: block;
+    }
+
+    .review {
+      display: flex;
+      align-items: flex-start;
+      border-top: 1px solid gray;
+      padding: 20px 0;
+    }
+
+    .profile {
+      margin-right: 15px;
+      text-align: center;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    .review-info {
+      flex-grow: 1;
+    }
+
+    .review-info h3 {
+      margin: 0;
+    }
+
+    .stars {
+      margin: 5px 0;
+    }
+
+    .review-text {
+      margin: 10px 0;
+    }
+
+    .dish-img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease; /* 부드럽게 확대되도록 */
+    }
+
+    .dish-img:hover {
+      transform: scale(1.1); /* 1.1배 확대 */
+      cursor: pointer;       /* 마우스 커서도 바뀌게 */
+      box-shadow: 0 4px 15px rgb(255, 255, 255);
+    }
+
+       /* 기존 html 태그에 부드러운 스크롤 효과 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* .lang 내부 정렬 보정 */
+    .lang {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* 리뷰 쓰기 버튼 스타일 */
+    .write-review-btn {
+      background-color: #1d002f;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      margin-left: auto;
+    }
+
+    .write-review-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Dining</h1>
+    <div class="nav">
+      <a href="#">셰프</a>
+      <a href="#">예약</a>
+      <a href="#">메뉴</a>
+      <a href="#">리뷰</a>
+    </div>
+
+    <div class="lang">EN KR JP</div>
+    </div>
+
+  <!-- 라디오 버튼은 탭보다 먼저 위치해야 합니다 -->
+  <input type="radio" id="tab1" name="tabs" checked>
+  <input type="radio" id="tab2" name="tabs">
+  <input type="radio" id="tab3" name="tabs">
+  <input type="radio" id="tab4" name="tabs">
+
+  <div class="tabs">
+  <div class="tab-labels">
+    <label for="tab1">쵸이닷</label>
+    <label for="tab2">모수</label>
+    <label for="tab3">비아 톨레도 파스타 바</label>
+    <label for="tab4">610 Magnolia</label>
+  </div>
+  <a href="#review-form" class="write-review-btn">리뷰 쓰기</a>
+</div>
+
+  <!-- 리뷰 섹션 -->
+  <div class="review-section">
+    
+    <!-- 쵸이닷 -->
+    <div class="reviews r1">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/손님리뷰.png" alt="박보검">
+          <div>박보검</div>
+        </div>
+        <div class="review-info">
+          <div>2025.07.01</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">맛있어요! 추천합니다.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/쵸이닷/쵸이닷_음식1.png" alt="쵸이닷 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r1">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 5.png" alt="유재상">
+          <div>유재상</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.27</div>
+          <div class="stars">☆☆☆☆</div>
+          <div class="review-text">파인다이닝이라 가격대는 좀 나가지만 신기한 경험이였어요!</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/쵸이닷/쵸이닷_음식2.png" alt="쵸이닷 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r1">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 6.png" alt="호날두">
+          <div>호날두</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.10</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">Siuuuuuuuuu!가 나오게 하는 맛이군요!</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/쵸이닷/쵸이닷_음식3.png" alt="쵸이닷 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- 모수 -->
+    
+    <div class="reviews r2">
+      <div class="review">
+        <div class="profile">
+          <img src="이미지/셰프/안성재 1.png" alt="안성재">
+          <div>안성재</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.21</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">제 음식이지만 너무 황홀해요.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/모수/모수_음식3.png" alt="모수 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r2">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 7.png" alt="유아인">
+          <div>유아인</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.11</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">마약보다도 인상 깊은 음식이였어요.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/모수/모수_음식1.png" alt="모수 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r2">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 9.png" alt="이동렬">
+          <div>이동렬</div>
+        </div>
+        <div class="review-info">
+          <div>2025.05.28</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">음식의 신세계를 경험하고 왔습니다!!</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/모수/모수_음식2.png" alt="모수 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- 비아 톨레도 -->
+    <div class="reviews r3">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/스크린샷 2025-06-07 오전 12.31.28 1.png" alt="사나">
+          <div>사나</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.13</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">다음에는 트와이스 멤버들도 데려와야겠어요!</div>
+          <img id="dish-img" src="이미지/메뉴음식사진//비아 톨레도 파스타 바/비아 톨레도 파스타 바 음식사진 1.jpg" alt="비아 톨레도 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r3">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 8.png" alt="장원영">
+          <div>장원영</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.09</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">살면서 나폴리맛피아님의 리조또를 먹어보다니 완전 럭키비키잖앙!☆</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/비아 톨레도 파스타 바/비아 톨레도 파스타 바 음식사진 2.jpg" alt="비아 톨레도 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r3">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 10.png" alt="나영석PD">
+          <div>나영석PD</div>
+        </div>
+        <div class="review-info">
+          <div>2025.05.10</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">이야 진짜 미쳤는데요? 다들 한 번 방문해 보세요.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/비아 톨레도 파스타 바/비아 톨레도 파스타 바 음식사진 3.jpg" alt="비아 톨레도 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- 610 Magnolia -->
+    <div class="reviews r4">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 12.png" alt="수지">
+          <div>수지</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.15</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">결혼은 요리 잘 하는 남자랑 해야겠네요.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/610 Magnolia/610 Magnollia 음식사진 1.jpg" alt="610 Magnolia 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r4">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 11.png" alt="카리나">
+          <div>카리나</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.13</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">완벽한 저녁이었어요!</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/610 Magnolia/610 Magnollia 음식사진 2.jpg" alt="610 Magnolia 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews r4">
+      <div class="review">
+        <div class="profile">
+          <img src="리뷰/download 13.png" alt="풍자">
+          <div>풍자</div>
+        </div>
+        <div class="review-info">
+          <div>2025.06.08</div>
+          <div class="stars">☆☆☆☆☆</div>
+          <div class="review-text">어웅 설레게 하는 맛이네요 완전 추천.</div>
+          <img id="dish-img" src="이미지/메뉴음식사진/610 Magnolia/610 Magnollia 음식사진 3.jpg" alt="610 Magnolia 음식" class="dish-img">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 리뷰 작성 폼 (form 부분) -->
+<div style="background: white; color: black; padding:20px; max-width:600px; margin:20px auto; border-radius:8px;">
+  <h2>리뷰 작성하기</h2>
+  <form id="review-form" action="#" method="post">
+    <label>닉네임:<br/>
+      <input type="text" name="nickname" required style="width:100%; padding:8px; margin-top:5px;" />
+    </label><br/><br/>
+    <label>날짜:<br/>
+      <input type="date" name="date" required style="width:100%; padding:8px; margin-top:5px;" />
+    </label><br/><br/>
+    <label>별점:<br/>
+      <select name="stars" required style="width:100%; padding:8px; margin-top:5px;">
+        <option value="☆☆☆☆☆">5점</option>
+        <option value="☆☆☆☆">4점</option>
+        <option value="☆☆☆">3점</option>
+        <option value="☆☆">2점</option>
+        <option value="☆">1점</option>
+      </select>
+    </label><br/><br/>
+    <label>리뷰 내용:<br/>
+      <textarea name="reviewText" rows="4" required style="width:100%; padding:8px; margin-top:5px;"></textarea>
+    </label><br/><br/>
+    <label>사진 URL:<br/>
+      <input type="url" name="imageUrl" placeholder="사진 URL을 입력하세요" style="width:100%; padding:8px; margin-top:5px;" />
+    </label><br/><br/>
+    <button type="submit" style="padding:10px 20px; background:#1d002f; color:#fff; border:none; cursor:pointer;">리뷰 제출</button>
+  </form>
+</div>
+
+
+</body>
+</html>
