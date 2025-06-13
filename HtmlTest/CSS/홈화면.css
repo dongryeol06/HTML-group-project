@@ -1,0 +1,122 @@
+body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    /* 상단 이미지 3개 정렬 */
+    #header1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    #header1 img {
+        width: 300px;
+        height: auto;
+        transition: all 0.2s linear;
+    }
+
+    #img01 { margin-top: 0; }
+    #img02 { margin-top: 180px; }
+    #img03 { margin-top: 360px; }
+    /*첫 이미지 호버기능*/
+    #img01:hover{ transform:scale(1.15);}
+    #img02:hover{ transform:scale(1.15);}
+    #img03:hover{ transform:scale(1.15);}
+
+    /* 환영 문구 */
+    #diningwolrd {
+        text-align: center;
+        color: white;
+        margin-top: 35%;
+        margin-bottom: 30%;
+        font-size: 28px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* nav 그룹 전체 정렬 */
+    #navgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    /* 각 브랜드 박스 */
+    .brand {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20%;
+    }
+
+    .brand img {
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .container {
+        flex: 1;
+        color: white;
+    }
+
+    .container p {
+        font-size: 30px;
+        margin: 0 0 10px 0;
+    }
+
+    /* 버튼 스타일 */
+    .bt1, .bt2 {
+        width: 100px;
+        height: 45px;
+        border: 2px solid white;
+        font-size: 18px;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        text-align: center;
+        display: inline-block;
+        line-height: 45px;
+        text-decoration: none; /* a태그의 기본 텍스트 데코레이션 제거 */
+        color: black;
+        text-align: center;
+    }
+
+    .bt2 {
+        width: 100px;
+        color: rgb(0, 0, 0); /* 인스타 버튼에 색 적용 */
+    }
+
+    /* 버튼 호버 효과 */
+    .bt1:hover, .bt2:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .bt2:hover {
+        color: rgb(252, 0, 223); /* 인스타 버튼 호버 시 색상 */
+    }
+
+    .text1 {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: justify;
+        display: block;
+        margin-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }

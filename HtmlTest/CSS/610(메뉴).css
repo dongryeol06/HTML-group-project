@@ -1,0 +1,210 @@
+body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-header {
+            background-color: #6B21A8;
+            text-align: center;
+            padding: 16px;
+        }
+        .header-title {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+        }
+        .header-nav {
+            margin-top: 8px;
+        }
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .nav-list li {
+            font-size: 14px;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: inline-block;
+        }
+        .nav-list li:first-child {
+            margin-left: 0;
+        }
+        .nav-list li:last-child {
+            margin-right: 0;
+        }
+        .language-options {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .language-item {
+            margin-right: 8px;
+        }
+        .language-item:last-child {
+            margin-right: 0;
+        }
+
+
+        .select-rest {
+            text-align: center;
+            font-size: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #4B5563;
+            padding-bottom: 8px;
+            width: fit-content;
+        }
+
+        .tab-item {
+            margin-left: 30px;
+            margin-right: 30px;
+            display: inline-block;
+        }
+
+        .tab-item a {
+            display: inline-block;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .tab-item a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .tab-item.active a {
+            font-weight: bold;
+            border-bottom: 2px solid white;
+        }
+
+        .course-title {
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+
+        .image-grid-container {
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 672px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-item-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-image {
+            border-radius: 4px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hover-box-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 5;
+            box-sizing: border-box;
+            display: table;
+        }
+
+        .hover-box-overlay > span {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 10px;
+        }
+
+
+        .grid-item-wrapper:hover .hover-box-overlay {
+            opacity: 1;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        .overlay-color-1 { background-color: rgba(136, 177, 15, 0.8); }
+        .overlay-color-2 { background-color: rgba(140, 94, 15, 0.8); }
+        .overlay-color-3 { background-color: rgba(168, 74, 23, 0.8); }
+        .overlay-color-4 { background-color: rgba(128, 74, 27, 0.8); }
+        .overlay-color-5 { background-color: rgba(195, 185, 167, 0.8); }
+
+        .highlight-text {
+            font-weight: bold;
+            font-size: 24px;
+            display: block;
+        }
+
+        .normal-text {
+            font-size: 16px;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .reservation-button-container {
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 40px;
+        }
+
+        .reservation-button {
+            border: 1px solid white;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .reservation-button:hover {
+            background-color: #374151;
+        }
