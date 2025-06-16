@@ -155,3 +155,20 @@ h4{
     width: 100%;
     
 }
+
+#logo {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#dining {
+transition: filter 0.3s ease;
+}
+
+#dining:hover {
+filter: drop-shadow(0 6px 6px rgba(255, 255, 255, 0.9));
+}
